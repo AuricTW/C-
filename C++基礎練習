@@ -17,3 +17,9 @@ int main(void){
     
 	return 0;
 }
+
+char a[2]={'A','B'};
+
+or
+
+char a[]="AB";
