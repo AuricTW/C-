@@ -1,9 +1,19 @@
 // 8月2日測試
 // 9/27練習
 
-long long int X;
+#include<stdio.h> 
 
-
-X = A*B;
-printf("%lld * %lld \n,A,B);
-printf("%lld",X);
+int main(void){
+	long long int A;
+	long long int B;
+	long long int X;
+	X = A*B;
+	printf("輸入A值");
+	scanf("%lld,&A");
+	printf("輸入B值");
+	scanf("%lld,&B");
+    printf("%lld * %lld \n",A,B);
+    printf("%lld",X);
+    
+	return 0;
+}
