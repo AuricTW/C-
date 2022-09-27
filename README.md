@@ -33,6 +33,31 @@ int main(void) {
     return 0;
 }
 ```
+
+```C
+#include <stdio.h>
+int main(){
+int score = 0
+
+printf("輸入分數：");
+scanf("%d", & score);
+
+if(score >= 90){
+    put("評級：A");
+}
+
+if else(score >= 80){
+    put("評級：B");
+}
+
+else(score >= 70){
+    put("評級：C");
+}
+
+return 0;
+}
+
+```
 ### switch條件判斷
 
 ### for迴圈
