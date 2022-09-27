@@ -42,16 +42,20 @@ int score = 0
 printf("輸入分數：");
 scanf("%d", & score);
 
-if(score >= 90){
+if(score >= 90 && score < 100){
     put("評級：A");
 }
 
-if else(score >= 80){
+if else(score >= 80 && score < 90){
     put("評級：B");
 }
 
-else(score >= 70){
+if else(score >= 70){
     put("評級：C");
+}
+
+else(score < 70 || score > 100){
+    put("下課找老師");
 }
 
 return 0;
@@ -59,9 +63,17 @@ return 0;
 
 ```
 ### switch條件判斷
+```
+
+```
 
 ### for迴圈
+```
+
+```
 
 ### while迴圈
+```
 
+```
 ### break、 continue、goto
