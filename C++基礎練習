@@ -1,1 +1,9 @@
 // 8月2日測試
+// 9/27練習
+
+long long int X;
+
+
+X = A*B;
+printf("%lld * %lld \n,A,B);
+printf("%lld",X);
