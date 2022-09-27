@@ -58,7 +58,7 @@ int score = 0
 printf("輸入分數：");
 scanf("%d", & score);
 
-if(score >= 90 && score < 100){
+if(score >= 90 && score <= 100){
     put("評級：A");
 }
 
@@ -79,7 +79,31 @@ return 0;
 
 ```
 ### switch條件判斷
-```
+```C
+#include<stdio.h>
+
+int main(){
+    int score = 0;
+    int level = 0;
+    printf("請輸入成績：");
+    scanf("%d,&score);
+    level = score/10;
+    
+    switch(level){  //使用單字：switch case puts break default
+        case 10;
+        
+        case 9;
+        puts(
+        break ;
+       
+        
+        
+}
+    
+    
+    
+    return 0;
+}
 
 ```
 
