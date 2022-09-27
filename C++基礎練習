@@ -43,3 +43,33 @@ int main(void){
     
 	return 0;
 }
+
+
+#include <stdio.h>
+int main(){
+	int a,b;
+	printf("請輸入數字1:",a);
+	scanf("%d",&a);
+	printf("請輸入數字2:",b);
+	scanf("%d",&b);
+    
+	if(a>3 && b>5){
+	    printf("%d",a+b);
+	}
+	else if(a>3 && b<=5){
+		printf("%d",a-b);
+	}
+	else if(a>3 && b>5){
+		printf("%d",a+b);
+	}
+	else if(a<3 && b>7){
+		printf("%d",a*b);
+	}
+	else if(a<3 && b<=7){
+		printf("%d",a/b);
+	}
+	else if(a==3){
+		printf("No");
+	}
+	return 0;
+}
