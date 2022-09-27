@@ -70,7 +70,7 @@ if else(score >= 70){
     put("評級：C");
 }
 
-else(){
+else{
     put("下課找老師");
 }
 
