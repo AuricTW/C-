@@ -23,3 +23,23 @@ char a[2]={'A','B'};
 or
 
 char a[]="AB";
+
+
+
+#include<stdio.h> 
+
+int main(void){
+	long long int A;
+	long long int B;
+	long long int X;
+	
+	printf("輸入A值");
+	scanf("%lld",&A);
+	printf("輸入B值");
+	scanf("%lld",&B);
+	X = A*B;
+    printf("%lld*%lld \n",A,B);
+    printf("%lld",X);
+    
+	return 0;
+}
