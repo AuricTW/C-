@@ -86,26 +86,26 @@ int main(){
     int score = 0;
     int level = 0;
     printf("請輸入成績：");
-    scanf("%d,&score);
+    scanf("%d",&score);
     level = score/10;
     
     switch(level){  //使用單字：switch case puts break default
-        case 10;
+        case 10:
+        	
+        case 9: 
+        	puts("評級：A");
+        	break ;
         
-        case 9;
-        puts("評級：A);
-        break ;
+        case 8: 
+        	puts("評級：B");
+        	break ;
         
-        case 8;
-        puts("評級：B);
-        break ;
-        
-        case 7;
-        puts("評級：C);
-        break ;
+        case 7: 
+        	puts("評級：C");
+        	break ;
        
        default:
-       puts("下課找老師");
+       		puts("下課找老師");
         
         }  
     return 0;
