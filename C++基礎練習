@@ -48,9 +48,9 @@ int main(void){
 #include <stdio.h>
 int main(){
 	int a,b;
-	printf("請輸入數字1:",a);
+	printf("請輸入變數1:");
 	scanf("%d",&a);
-	printf("請輸入數字2:",b);
+	printf("請輸入變數2:");
 	scanf("%d",&b);
     
 	if(a>3 && b>5){
@@ -59,9 +59,7 @@ int main(){
 	else if(a>3 && b<=5){
 		printf("%d",a-b);
 	}
-	else if(a>3 && b>5){
-		printf("%d",a+b);
-	}
+	
 	else if(a<3 && b>7){
 		printf("%d",a*b);
 	}
