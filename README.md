@@ -93,15 +93,21 @@ int main(){
         case 10;
         
         case 9;
-        puts(
+        puts("評級：A);
+        break ;
+        
+        case 8;
+        puts("評級：B);
+        break ;
+        
+        case 7;
+        puts("評級：C);
         break ;
        
+       default:
+       puts("下課找老師");
         
-        
-}
-    
-    
-    
+        }  
     return 0;
 }
 
