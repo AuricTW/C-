@@ -8,7 +8,7 @@ int main(){                //主程式
 
     printf("Hello World"); //程式主題
     
-return 0;                  //主程式結尾
+    return 0;              //主程式結尾
 }
 
 ```
