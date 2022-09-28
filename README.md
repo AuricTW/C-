@@ -128,6 +128,21 @@ int main(){
 
 ```
 
+```C
+#include<stdio.h>
+
+int main(){
+    for(int i=1;i<10;i++){       
+	    for(int j=2;j<10;j++){
+            printf("%d*%d=%2d ",j,i,j*i); //%2d在一位數左邊補空格 %3d在一位數字左邊補兩格 兩位數字補一格 
+         }
+         
+         puts("");
+    }
+
+    return 0;
+}
+```
 ### while迴圈
 ```
 
