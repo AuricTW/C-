@@ -71,3 +71,18 @@ int main(){
 	}
 	return 0;
 }
+
+
+
+#include<stdio.h>
+
+int main(){
+	double A,B;
+	char math;
+	scanf("%lf%c%lf",&A,&math,&B);
+	if(math == '*'){
+		printf("%.lf",A*B);
+	}
+	return 0;
+}
+
