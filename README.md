@@ -23,6 +23,14 @@ int main(){                //主程式
 |%%|替換為一個%| \\\\ |一個倒斜線|
 
 ## 常用變數
+|中文|型態名|佔用空間|範圍|輸出入方法|
+|-|-|-|-|-|
+|字元| | | | |
+| | | | | |
+| | | | | |
+| | | | | |
+| | | | | |
+| | | | | |
 ![](https://miro.medium.com/max/1400/1*vacBGZ4E9MandE5CECup1g.png)
 ![](https://i.imgur.com/OEU3Nov.jpg)
 ![](https://i.imgur.com/xOBo3XU.jpg)
