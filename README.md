@@ -158,7 +158,7 @@ int main(){
 	printf("輸入成績（輸入-1結束）")；
 	scanf("%lf",&score)；
     }
-printf("%")
+printf("平均：%lf",sum/count);
 return 0;
 }
 
