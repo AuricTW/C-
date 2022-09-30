@@ -144,7 +144,23 @@ int main(){
 }
 ```
 ### while迴圈
-```
+```C
+//算平均
+#include<stdio.h>
+
+int main(){
+    int score = 0
+    int sum = 0
+    int count = -1
+    while(score != -1){
+	count++;
+	sum += score;
+	
+
+    }
+
+return 0;
+}
 
 ```
 ### break、 continue、goto
