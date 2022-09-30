@@ -149,19 +149,21 @@ int main(){
 #include<stdio.h>
 
 int main(){
-    double score = 0；
-    int sum = 0；
-    int count = -1；
+    double score = 0;
+    int sum = 0;
+    int count = -1;
+    
     while(score != -1){
 	count++;
 	sum += score;
-	printf("輸入成績（輸入-1結束）")；
-	scanf("%lf",&score)；
+	printf("輸入成績（輸入-1結束）");
+	scanf("%lf",&score);
     }
-printf("平均：%lf",sum/count);
+    
+printf("平均：%lf",(double)sum/count);
+
 return 0;
 }
-
 ```
 ### break、 continue、goto
 
