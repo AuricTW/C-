@@ -26,11 +26,11 @@ int main(){                //主程式
 |中文|型態名|佔用空間|範圍|輸出入方法|
 |-|-|-|-|-|
 |字元|char|1byte|-128~127|%c(文字),%hhd(數字)|
-|短整數|short|2byte|-32768~32767| |
-|整數|int|4byte|-2147483648~2147483648| |
-|長整數|long (int)|4byte| | |
-|長長整數|long long (int)|8byte| | |
-|無號整數|unsigned (int)|4byte| | |
+|短整數|short|2byte|-32768~32767|%hd|
+|整數|int|4byte|-2147483648~2147483648|%o(8進位),%d(10進位),%x(16進位)|
+|長整數|long (int)|4byte|-2147483648~2147483648| |
+|長長整數|long long (int)|8byte|-9*10^18~9*10^18| |
+|無號整數|unsigned (int)|4byte|0~4294967295| |
 
 ![](https://miro.medium.com/max/1400/1*vacBGZ4E9MandE5CECup1g.png)
 ![](https://i.imgur.com/OEU3Nov.jpg)
