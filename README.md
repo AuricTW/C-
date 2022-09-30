@@ -149,4 +149,4 @@ int main(){
 ```
 ### break、 continue、goto
 
-#進階型態
+# 進階型態
