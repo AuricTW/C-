@@ -25,12 +25,12 @@ int main(){                //主程式
 ## 常用變數
 |中文|型態名|佔用空間|範圍|輸出入方法|
 |-|-|-|-|-|
-|字元|char|1byte|127~128|%c(文字),%hhd(數字)|
-|短整數|short|2byte| | |
-|整數|int|4byte| | |
+|字元|char|1byte|-128~127|%c(文字),%hhd(數字)|
+|短整數|short|2byte|-32768~32767| |
+|整數|int|4byte|-2147483648~2147483648| |
 |長整數|long (int)|4byte| | |
-|長長整數|long long (int)| | | |
-|無號整數|unsigned (int)| | | |
+|長長整數|long long (int)|8byte| | |
+|無號整數|unsigned (int)|4byte| | |
 
 ![](https://miro.medium.com/max/1400/1*vacBGZ4E9MandE5CECup1g.png)
 ![](https://i.imgur.com/OEU3Nov.jpg)
