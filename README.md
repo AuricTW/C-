@@ -149,16 +149,16 @@ int main(){
 #include<stdio.h>
 
 int main(){
-    int score = 0
-    int sum = 0
-    int count = -1
+    double score = 0；
+    int sum = 0；
+    int count = -1；
     while(score != -1){
 	count++;
 	sum += score;
-	
-
+	printf("輸入成績（輸入-1結束）")；
+	scanf("%lf",&score)；
     }
-
+printf("%")
 return 0;
 }
 
