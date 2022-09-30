@@ -29,7 +29,7 @@ int main(){                //主程式
 |短整數|short|2byte|-32768~32767|%hd|
 |整數|int|4byte|-2147483648~2147483648|%o(8進位),%d(10進位),%x(16進位)|
 |長整數|long (int)|4byte|-2147483648~2147483648|%ld|
-|長長整數|long long (int)|8byte|-9*10^18~9*10^18|%lld|
+|長長整數|long long (int)|8byte|-9x10^18~9x10^18|%lld|
 |無號整數|unsigned (int)|4byte|0~4294967295|%u|
 
 ![](https://miro.medium.com/max/1400/1*vacBGZ4E9MandE5CECup1g.png)
