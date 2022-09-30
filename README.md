@@ -32,7 +32,6 @@ int main(){                //主程式
 |長長整數|long long (int)|8byte|-9x10^18~9x10^18|%lld|
 |無號整數|unsigned (int)|4byte|0~4294967295|%u|
 
-![](https://miro.medium.com/max/1400/1*vacBGZ4E9MandE5CECup1g.png)
 ![](https://i.imgur.com/xOBo3XU.jpg)
 ## 流程控制
 
