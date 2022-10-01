@@ -31,8 +31,10 @@ int main(){                //主程式
 |長整數|long (int)|4byte|-2147483648~2147483648|%ld|
 |長長整數|long long (int)|8byte|-9x10^18~9x10^18|%lld|
 |無號整數|unsigned (int)|4byte|0~4294967295|%u|
+|浮點數|float|4byte|-3.402823668x10^38~3.402823668x10^38|%f|
+|雙精度浮點數|double|8byte|-1.7976931348x10^308~1.7976931348x10^308|%lf|
 
-![](https://i.imgur.com/xOBo3XU.jpg)
+
 ## 流程控制
 
 ### if條件判斷
