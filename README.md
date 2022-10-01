@@ -176,7 +176,7 @@ return 0;
 ```
 ### break、 continue、goto
 ```C
-include<stdio.h>
+#include<stdio.h>
 
 int main(){
 
@@ -185,7 +185,7 @@ return 0;
 
 ```
 ```C
-include<stdio.h>
+#include<stdio.h>
 
 int main(){
 
@@ -194,7 +194,7 @@ return 0;
 
 ```
 ```C
-include<stdio.h>
+#include<stdio.h>
 
 int main(){
 
