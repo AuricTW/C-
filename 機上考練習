@@ -1,0 +1,118 @@
+#include<stdio.h> 
+int main(){
+	
+	double a,b,c,x,y,i,j,n,m,chin,chinese,math,english,sum,part,ch,r;
+	char A,X;
+	printf("請輸入測試編號:");
+	scanf("%lf",&a);
+	if( a == 1){	//基本計算 
+		scanf("%lf%c%lf",&a,&A,&b);
+		printf("%.lf+%.lf=%.4lf",a,b,a+b);
+
+
+	} 
+	else if(a == 2){    //菱形自訂層數版本 
+		
+		printf("你想要幾層菱形"); 
+		scanf("%lf",&r);
+		for(double x=1;x<=r/2+1;x++){
+			for(double y=x;y<r/2+1;y++){
+				printf(" ");
+			}
+			for(double y=1;y<x*2;y++){
+				printf("*");
+			}
+			printf("\n");
+	}
+		for(double x=1;x<=r/2;x++){
+			for(double y=0;y<=x;y++){
+				printf(" ");
+			}
+			for(double y=x*2;y<r;y++){
+				printf("*");
+			}
+			printf("\n");
+		}	   
+	
+		}
+	
+	else if(a == 3){    //九九乘法表 
+		for(double i=1;i<10;i++){
+			for(double j=1;j<10;j++){
+				printf("%.lf*%.lf=%2.lf ",i,j,i*j);
+			}
+			printf("\n");
+		}
+		
+	}
+	
+	else if(a == 4){	//基本計算機	
+		printf("請輸入你想要的算式:");
+		scanf("%lf%c%lf",&n,&A,&m);
+		if(A == '+'){
+			printf("Ans:%.lf",n+m);
+			
+		}
+		else if(A == '-') {
+			printf("Ans:%.lf",n-m);
+		}
+		else if(A == '*'){
+		    printf("Ans:%.lf",n*m);
+	    }
+	    else if(A == '/'){
+	    	printf("Ans:%.2lf",n/m);
+		}
+		
+	}
+	
+	else if(a == 5){
+		
+		printf("請輸入國文作文成績:");
+		scanf("%lf",&chin);
+		printf("請輸入國文手寫成績:");
+		scanf("%lf",&chinese);
+		printf("請輸入英文成績:");
+		scanf("%lf",&english);
+		printf("請輸入數學成績:");
+		scanf("%lf",&math);
+		
+		ch = chin+chinese;
+		ch = ch/2;
+		sum = ch+english+math;
+		part = sum/3;
+		printf("您的總成績為:%.2lf\n",sum);
+		printf("您的平均為:%.2lf",part);
+	}
+	
+	else if(a == 666 || a == 777){
+		printf("別亂打");
+	}
+	
+	else{	//switch迴圈測試 
+		printf("請輸入新版測試編號:");
+		int ag = 0;
+		scanf("%d",&ag);
+		
+		switch(ag){
+			
+			case 10: 
+		    	printf("這是測試10");
+		    	break;
+			
+			case 11:
+				printf("這是測試11");
+				break;
+			default:
+				printf("這是測試12");
+				break;
+			
+		}
+		
+		
+		
+	}
+	    return 0;
+	}
+
+
+
