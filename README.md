@@ -196,11 +196,15 @@ return 0;
 
 ```
 ```C
-#include<stdio.h>
-
+#include<stdio.h> 
 int main(){
-
-return 0;
+	for(int i=1;i<10;i++){
+		if(i==5){
+			continue;
+		}
+		printf("%d ",i);
+	}
+	return 0;
 }
 
 ```
