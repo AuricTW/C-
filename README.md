@@ -175,6 +175,8 @@ return 0;
 }
 ```
 ### break、 continue、goto
+break 可以離開目前switch、for、while、do while區塊，並前進至區塊後下一個陳述句
+countinue 與break類似，主要用於迴圈，所不同的是break會結束區塊的執行，而countinue只會結束接下來區塊中的陳述句，跳回至迴圈區塊的開頭繼續下一個迴圈，而不是離開迴圈
 ```C
 #include<stdio.h>
 
