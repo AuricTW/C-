@@ -1,0 +1,19 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(){
+	
+	double list;
+	
+	printf("請問您想要使用什麼功能:\n(1)猜數字遊戲\n(2)計算機\n");
+	scanf("%lf",&list);
+	if (list == 1){
+		printf("尚未寫入");
+		
+	}
+	else if (list == 2){
+		printf("尚未寫入");
+		
+	}
+	return 0;
+}
