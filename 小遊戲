@@ -68,3 +68,411 @@ int main()
 	}
 		return 0;
 }
+
+
+#include <stdio.h>
+002
+#include <stdlib.h>
+003
+#include <conio.h>
+004
+#include <windows.h>
+005
+ 
+006
+#define high 25 //畫布高
+007
+#define width 60 //畫布寬
+008
+#define border -1 //邊界
+009
+#define blank 0 //空白
+010
+#define plane 1 //飛機
+011
+#define bullet 2 //子彈
+012
+#define enemy 3 //敵機
+013
+#define destroy 4 //摧毀標記
+014
+ 
+015
+int canvas[high+2][width+2]; //遊戲場景的高和寬
+016
+int pos_h,pos_w; //飛機位置
+017
+int enemynum; //敵機數量
+018
+int interval; //同個計次來模擬時間間隔
+019
+int itv_move; //敵機移動的時間間隔
+020
+int itv_new; //敵機重新整理的時間間隔
+021
+int score; //分數
+022
+int IsOver; //判斷遊戲是否結束
+023
+ 
+024
+void Startup(); //遊戲數值初始化
+025
+void Show(); //遊戲介面輸出
+026
+void UpdateInput(); //與輸入無關的遊戲狀態更新
+027
+void UpdateNormal(); //因輸入導致的遊戲狀態更新
+028
+ 
+029
+int main(){
+030
+ Startup(); //初始化
+031
+ while(IsOver){ //遊戲迴圈
+032
+ UpdateInput();
+033
+ UpdateNormal();
+034
+ 
+035
+ Show();
+036
+ }
+037
+ printf("\t\tgame over!\n");
+038
+ Sleep(2500); //暫停遊戲結束介面（毫秒）
+039
+ system("pause");
+040
+ return 0;
+041
+}
+042
+void Startup(){ //遊戲數值初始化
+043
+ IsOver=1;
+044
+ score=0; //初始化分數
+045
+ for(int i=0;i<high+2;i++){ //初始化畫布
+046
+ for(int j=0;j<width+2;j++){
+047
+ if(i==0 || i==high+1 ||
+048
+ j==0 || j==width+1){
+049
+ canvas[i][j]=border;
+050
+ }
+051
+ else canvas[i][j]=blank;
+052
+ }
+053
+ }
+054
+ pos_h=high/2; //初始化飛機豎直座標
+055
+ pos_w=width/2; //初始化飛機水平座標
+056
+ canvas[pos_h][pos_w]=plane; //初始化飛機位置
+057
+ enemynum=3; //敵機數量
+058
+ srand(time(NULL));
+059
+ interval=4; //初始化時間間隔計數
+060
+ itv_move=5; //初始化敵機移動時間間隔
+061
+ itv_new =40; //初始化敵機重新整理時間間隔
+062
+}
+063
+void Show(){ //遊戲介面輸出
+064
+ HideCursor(); //隱藏游標
+065
+ gotoxy(1,1); //回撥游標、重新整理畫面
+066
+ for(int i=0;i<high+2;i++){
+067
+ for(int j=0;j<width+2;j++){
+068
+ if( canvas[i][j] == plane ){ //當前位置為飛機位置
+069
+ printf("*");
+070
+ }
+071
+ else if( canvas[i][j] == bullet ){ //當前位置為子彈位置
+072
+ printf("|");
+073
+ }
+074
+ else if( canvas[i][j] == enemy ){ //當前位置為敵機位置
+075
+ printf("@");
+076
+ }
+077
+ else if( canvas[i][j] == border ){ //當前位置為邊界
+078
+ printf("#");
+079
+ }
+080
+ else if( canvas[i][j] == blank ){ //當前位置無物，且在邊界內
+081
+ printf(" ");
+082
+ }
+083
+ else if( canvas[i][j] == destroy ){ //當前位置無物，且在邊界內
+084
+ printf("x");
+085
+ }
+086
+ }
+087
+ printf("\n");
+088
+ }
+089
+ printf("\n得分：%d",score);
+090
+}
+091
+void UpdateInput(){ //與輸入無關的遊戲狀態更新
+092
+ char key_W=GetKeyState('W'),//監測 W 鍵是否按下
+093
+ key_S=GetKeyState('S'),//監測 S 鍵是否按下
+094
+ key_A=GetKeyState('A'),//監測 A 鍵是否按下
+095
+ key_D=GetKeyState('D'),//監測 D 鍵是否按下
+096
+ key_attack=GetKeyState(' '); //監測 空格 鍵是否按下
+097
+ if(kbhit()){ //當有鍵按下時
+098
+ if(key_W<0){ //當按下 W 鍵，上移
+099
+ if(pos_h>1){
+100
+ canvas[pos_h][pos_w]=blank;
+101
+ if(canvas[pos_h-1][pos_w] == enemy){ //下個位置是敵機，撞毀
+102
+ canvas[pos_h-1][pos_w]= destroy;
+103
+ IsOver=0;
+104
+ }
+105
+ else canvas[--pos_h][pos_w]=plane;
+106
+ }
+107
+ }
+108
+ if(key_S<0){ //當按下 S 鍵，下移
+109
+ if(pos_h<high){
+110
+ canvas[pos_h][pos_w]=blank;
+111
+ if(canvas[pos_h+1][pos_w] == enemy){ //下個位置是敵機，撞毀
+112
+ canvas[pos_h+1][pos_w]= destroy;
+113
+ IsOver=0;
+114
+ }
+115
+ else canvas[++pos_h][pos_w]=plane;
+116
+ }
+117
+ }
+118
+ if(key_A<0){ //當按下 A 鍵，左移
+119
+ if(pos_w>1){
+120
+ canvas[pos_h][pos_w]=blank;
+121
+ if(canvas[pos_h][pos_w-1] == enemy){ //下個位置是敵機，撞毀
+122
+ canvas[pos_h][pos_w-1]= destroy;
+123
+ IsOver=0;
+124
+ }
+125
+ else canvas[pos_h][--pos_w]=plane;
+126
+ }
+127
+ }
+128
+ if(key_D<0){ //當按下 D 鍵，右移
+129
+ if(pos_w<width){
+130
+ canvas[pos_h][pos_w]=blank;
+131
+ if(canvas[pos_h][pos_w+1] == enemy){ //下個位置是敵機，撞毀
+132
+ canvas[pos_h][pos_w+1]= destroy;
+133
+ IsOver=0;
+134
+ }
+135
+ else canvas[pos_h][++pos_w]=plane;
+136
+ }
+137
+ }
+138
+ if(key_attack<0){ //當按下空格鍵，發射子彈
+139
+ if(pos_h!=1)canvas[pos_h-1][pos_w]=bullet;
+140
+ }
+141
+ }
+142
+}
+143
+void UpdateNormal(){ //因輸入導致的遊戲狀態更新
+144
+ int temp[high+2][width+2]; //用來判斷原位置的臨時陣列
+145
+ for(int i=1;i<=high;i++){
+146
+ for(int j=1;j<=width;j++){
+147
+ temp[i][j]=canvas[i][j];
+148
+ }
+149
+ }
+150
+ for(int i=1;i<=high;i++){ //遍歷臨時陣列，修改畫布
+151
+ for(int j=1;j<=width;j++){
+152
+ if(temp[i][j]==enemy && interval%itv_move==0){ //當前位置為敵機
+153
+ canvas[i][j]=blank;
+154
+ if(temp[i+1][j]==bullet){ //下面為子彈，敵機被擊中
+155
+ canvas[i+1][j]=blank;
+156
+ score++;
+157
+ printf("\a"); //擊中音效
+158
+ }
+159
+ else if(i<high){
+160
+ canvas[i+1][j]=enemy;
+161
+ }
+162
+ if(i+1==pos_h&&j==pos_w){ //下面為飛機，玩家飛機被撞毀
+163
+ canvas[i+1][j]=destroy;
+164
+ IsOver=0;
+165
+ }
+166
+ }
+167
+ if(temp[i][j]==bullet){ //當前位置為子彈
+168
+ canvas[i][j]=blank;
+169
+ if(temp[i-1][j]==enemy){ //下個位置是敵機，敵機被擊毀
+170
+ canvas[i-1][j]=blank;
+171
+ score++;
+172
+ printf("\a");
+173
+ }
+174
+ else if(i>1){
+175
+ canvas[i-1][j]=bullet;
+176
+ }
+177
+ }
+178
+ }
+179
+ }
+180
+ if(interval%itv_new==0) //剛好到時間間隔
+181
+ for(int i=0;i<enemynum;i++){ //新增敵機群
+182
+ canvas[rand()%2+1][rand()%width+1]=enemy;
+183
+ }
+184
+ if(interval<=100){ //時間間隔計次
+185
+ interval++;
+186
+ }
+187
+ else{ //時間間隔計次清零
+188
+ interval=0;
+189
+ }
+190
+}
+191
+void gotoxy(int x,int y){ //回撥游標
+192
+ COORD pos;
+193
+ pos.X=x-1;
+194
+ pos.Y=y-1;
+195
+ SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE),pos);
+196
+}
+197
+void HideCursor(){ //隱藏游標函式
+198
+ CONSOLE_CURSOR_INFO cursor;
+199
+ cursor.bVisible = FALSE;
+200
+ cursor.dwSize = sizeof(cursor);
+201
+ HANDLE handle = GetStdHandle(STD_OUTPUT_HANDLE);
+202
+ SetConsoleCursorInfo(handle,&cursor);
+203
+}
+
