@@ -1,0 +1,65 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<windows.h>
+#include<conio.h>
+int main()
+{
+	char a[100][100] = { 
+	                    "######",
+						"#o #  ",
+						"# ## #",
+						"#  # #",
+						"##   #",
+						"######" };//迷宮出口為a[1][5] 
+	int i, x = 1, y = 1;//p,q儲存迷宮出口的位置
+	for (i = 0; i < 6; i++)
+		puts(a[i]);
+	char ch;
+	while (x != 1 || y != 5)
+	{
+		ch = _getch();
+		if (ch == 's')
+		{
+			if (a[x + 1][y] != '#')
+			{
+				a[x][y] = ' ';
+				x++;
+				a[x][y] = 'o';
+			}
+		}
+		if (ch == 'w')
+		{
+			if (a[x - 1][y] != '#')
+			{
+				a[x][y] = ' ';
+				x--;
+				a[x][y] = 'o';
+			}
+		}
+		if (ch == 'a')
+		{
+			if (a[x][y - 1] != '#')
+			{
+				a[x][y] = ' ';
+				y--;
+				a[x][y] = 'o';
+			}
+		}
+		if (ch == 'd')
+		{
+			if (a[x][y + 1] != '#')
+			{
+				a[x][y] = ' ';
+				y++;
+				a[x][y] = 'o';
+			}
+		}
+
+		system("cls");
+		if(x==1&&y==5)
+		printf("成功過關\n");
+		for (i = 0; i < 6; i++)
+			puts(a[i]);
+	}
+		return 0;
+}
