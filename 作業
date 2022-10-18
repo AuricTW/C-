@@ -1,0 +1,17 @@
+#include<stdio.h>
+int ans,sol;
+int main(){
+    printf("輸入答案:")；
+    scanf("%d",&ans)
+    while(sol!=ans){
+    if(sol>ans){
+    printf("比1大，比%d小",sol)；
+
+    }
+    if(sol<ans){
+    printf("比%d大，比100小",sol)；
+   }
+
+}
+    return 0;
+}
