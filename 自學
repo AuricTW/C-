@@ -1,15 +1,22 @@
 #include<stdio.h>
-#include<stdlib.h>
-#include<time.h>
+#include<stdlib.h>	//隨機 
+#include<time.h> 	//時間 
 
-int main(){
+
+void come(void)		//副程式測試
+{
+	printf("測試123");
+}
+
+int main(void){
 	
 	int random,random1,guess;
 	double list;
 	
 	srand(time(0));
 	
-	printf("請問您想要使用什麼功能:\n(1)猜數字遊戲\n(2)計算機\n");
+
+	printf("請問您想要使用什麼功能:\n(1)猜數字遊戲\n(2)計算機\n(3)圖形列印\n");
 	scanf("%lf",&list);
 	
 	if (list == 1){ //猜數字 
@@ -31,8 +38,13 @@ int main(){
 		
 	}
 	else if (list == 2){
-		printf("尚未寫入");
+		printf("尚未寫入\n");
 		
 	}
+	else if (list == 2){
+		printf("尚未寫入\n");
+		
+	}
+	come();
 	return 0;
 }
