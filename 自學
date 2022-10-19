@@ -20,22 +20,29 @@ int main(void){
 	printf("請問您想要使用什麼功能:\n(1)猜數字遊戲\n(2)計算機\n(3)圖形列印\n(4)走迷宮\n");
 	scanf("%lf",&list);
 	
-	if (list == 1){ //猜數字 
-		random = rand();
+	if (list == 1){ 	//猜數字 
+		int sum=0;
+		int store1=100; 
+		int store2=1; 
+		random = rand();	//設定隨機答案 
 		random1 = random%100+1;
+		
 		while(guess!=random1){
-			printf("1到100輸入一個數\n");
+			sum++;
+			printf("%d到%d輸入一個數\n",store2,store1);
 			scanf("%d",&guess);
-			if(guess<random1){
-				printf("比%d大\n",guess);
-				
+			if(guess<random1){		//猜測數比答案小 
+				printf("比%d大,比%d小\n",guess,store1);
+				store2=guess;
 			}
-			else if(guess>random1){
-				printf("比%d小\n",guess);
+			else if(guess>random1){		//猜測數比答案大 
+				printf("比%d大,比%d小\n",store2,guess);
+				store1=guess;
 			}
 			
 		}
-		printf("恭喜答對");
+		printf("恭喜答對\n");
+		printf("您總共猜了%d次\n",sum);
 		
 	}
 	else if (list == 2){
