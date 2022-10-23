@@ -476,3 +476,43 @@ void HideCursor(){ //隱藏游標函式
 203
 }
 
+
+練習(賭場賭大或小的遊戲)
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h> 
+int main(){
+ int money = 100;
+ int lostm, op;
+ srand(time(0));
+ 
+ do{
+ int dice = rand() % 6;
+ 
+ printf("\n\n您擁有 %d 現金。  位於地點:<賭場>\n\n",money);
+ printf(">>> 請下注您的金額:");
+ scanf("%d",&lostm);
+ if(lostm <= money){
+  money = money - lostm;
+  system("cls");
+  printf("\n您下注 %d 元。",lostm);
+ }
+ printf("\n\n(1)大  (2)小\n賭大或小:");
+ scanf("%d",&op);
+ if(op == 1 || dice > 3){
+  printf("\n骰子大  贏得獎金 %d 元",lostm*2);
+  money = lostm*2 + money;
+ }else if(op == 1 || dice < 3){
+  printf("\n骰子小  剩餘現金 %d 元",money);
+ }else if(op == 2 || dice < 3){
+  printf("\n骰子小  贏得獎金 %d 元",lostm*2);
+  money = lostm*2 + money;
+ }else if(op == 2 || dice > 3){
+  printf("\n骰子大  剩餘現金 %d 元",money);
+ } 
+ }while(money != 0);
+ system("cls");
+ printf("您破產了！銘謝惠顧...");
+ return 0;
+}
+
