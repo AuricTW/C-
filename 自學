@@ -123,6 +123,10 @@ int main(void){
 			} 
 		}
 	}
+	else if (list == 5){
+		printf("尚未寫入\n");
+		
+	}
 	come();
 	return 0;
 }
