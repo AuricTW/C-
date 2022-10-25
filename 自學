@@ -124,7 +124,8 @@ int main(void){
 		}
 	}
 	else if (list == 5){
-		printf("尚未寫入\n");
+		printf("請選擇賭場功能\n1.猜數字\n賭大小\n");
+	
 		
 	}
 	come();
