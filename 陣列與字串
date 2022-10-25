@@ -18,3 +18,20 @@ int main(){
 	}
 	return 0;
 }
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+
+int main(){
+	printf("商品1:75元\n商品2:100元\n商品3:200元\n商品4:500元\n商品5:1500元\n");
+	int total=0,id;
+	int price[5]={75, 100, 200, 500, 1500};
+	do{
+	printf("輸入商品編號");
+	scanf("%d",&id);
+	total+=price[id-1];
+	}while(id!=0);
+	printf("total:%d元",total);
+	return 0;
+} 
