@@ -74,3 +74,75 @@ int main(){
 	printf("Length: %d\n",str_len(str));
 	return 0;
 }
+
+#include<stdio.h>
+int main(){
+	int A[5]={0};
+	int sum=1;
+	printf("樹高:");
+	scanf("%d",&A[0]);
+	printf("白天爬:");
+	scanf("%d",&A[1]);
+	printf("晚上掉:");
+	scanf("%d",&A[2]);
+	A[3]+=A[0];
+	do{	
+	sum++;
+		A[3]-=A[1];
+		if(A[3]<=0){
+			break;
+		}
+		A[3]+=A[2];
+
+	}while(A[3]<=0);
+	
+	printf("需要天數:%d",sum);
+	
+	return 0;
+}
+int main(){
+    int A[2];
+    int i;
+	 
+	 for(i=1;i<=3;i++){
+ 		printf("學生%d國文成績:",i);
+		scanf("%d",&A[i-1]);	 	
+	 }
+    for(i=0;i<3;i++){
+ 	if(A[i]>=A[0]&&A[i]>=A[1]&&A[i]>=A[2]){
+ 	printf("最高分數:%d\n",A[i]);
+ 
+	}
+}
+	 printf("平均分數:%d\n",(A[0]+A[1]+A[2])/3);
+	return 0;
+}
+/*
+for(i=0;i<3;i++){
+ 	if(A[i]>=A[0]&&A[i]>=A[1]&&A[i]>=A[2]){
+ 	printf("最高分數:%d\n",A[i]);
+ 
+	}
+}
+
+*/
+#include<stdio.h>
+#include<stdlib.h>
+int main(){
+	int n,i,j;
+	char name[100];
+	
+	printf("輸入名字:");
+	scanf("%s",&name);
+	
+	printf("輸出顯示次數:");
+	scanf("%d",&n);
+	
+	do{
+		i++;
+		printf("你的名字第%d次:%s\n",i,name); 
+		
+	}while(i!=n);
+	 
+	return 0;
+}
