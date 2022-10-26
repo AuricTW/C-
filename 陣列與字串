@@ -1,4 +1,44 @@
 #include<stdio.h>
+int main(){
+	char A[],B[];
+	int X,N,A1,B1; 
+	scanf("%s",&A);
+	do {
+		scanf("%d%s",&X,&B);  
+	
+		if(X==0){
+			B1=sizeof(B)-1;
+			for(int i=0;i<=sizeof(A)-1;i++){
+			A[i+N1]=A[i];
+			
+			//複製陣列 
+			
+			A1=sizeof(A)-1;  //新陣列長度 
+			B[]={0};	
+			}
+		}
+	    else if(X==1){
+			B1=sizeof(B)-1;	
+			
+			//複製陣列 
+			
+			A1=sizeof(A)-1;  //新陣列長度 
+			B[]={0};
+		}
+		
+		else{
+			break;
+		}
+		
+	}while(1);
+	printf("%s",A);
+	return 0;
+} 
+
+
+
+
+#include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
 int main(){
