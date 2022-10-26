@@ -41,3 +41,77 @@ int main(){
 	printf("%s",A);
 	return 0;
 } 
+
+
+#include<stdio.h>
+#include <string.h>
+#include<stdlib.h>
+int main(){
+	char A[150],B[150],X[0];
+	int N,A1,B1,len; 
+	scanf("%s",&A);
+	do {
+		scanf("%d%s",&X,&B);  
+		if(X[0]=='1'){
+		    len = strlen(A) + strlen(B) + 1;
+		    char concated[len];
+		    memset(concated, '\0', len);
+		    strcat(concated, A);
+		    strcat(concated, B);
+		    strcpy(A,concated);
+		}
+	    else if(X[0]=='0'){
+		    len = strlen(A) + strlen(B) + 1;
+		    char concated[len];
+		    memset(concated, '\0', len);
+		    strcat(concated, B);
+		    strcat(concated, A);
+		    strcpy(A,concated);
+		}
+		}while(fgets (X, sizeof (X), stdin) != NULL); //無法結束  
+	printf("%s",A);
+	return 0;
+} 
+
+
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char s[10000], b[10000];
+    int k, a;
+    k=scanf("%s", s);
+    while (k == 1)
+    {
+        k = 0;
+        k = scanf("%d %s", &a, b) - 1;
+        if(k != 1)
+		{
+			break;
+		} 
+		if(a==1)
+        {
+            strcat(s, b);
+            char b[10000] = "";
+        }
+        else if(a==0)
+        {
+           int sLen = strlen(s);
+           int bLen = strlen(b);
+           int k=0;
+           for (int i = sLen; i > 0; i--)
+           {
+                s[bLen+sLen-1-k] = s[sLen -1 -k];
+                k += 1;
+           }
+           for (int j = 0; j < bLen; j++)
+           {
+                s[j] = b[j];
+           }
+           char b[10000] = "";
+        }
+
+    }
+    printf("%s", s);
+} 
