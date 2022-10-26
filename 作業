@@ -30,3 +30,15 @@ int main(){
       }
 return 0;
 }
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+int main(){
+	char A[],B[],C[],hahapy[];
+	scanf("%s",&A);
+	scanf("%s",&A);
+	scanf("%s",&A);
+	
+	return 0;
+}
