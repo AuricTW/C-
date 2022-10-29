@@ -11,7 +11,7 @@ void come(void)		//副程式測試
 
 int main(void){
 	
-	int random,random1,guess;
+	int random,random1,guess,sum1,sum2,part;
 	double list;
 	
 	srand(time(0));
@@ -46,15 +46,18 @@ int main(void){
 		
 	}
 	
+	
 	else if (list == 2){
 		printf("尚未寫入\n");
 		
 	}
 	
+	
 	else if (list == 3){
 		printf("尚未寫入\n");
 		
 	}
+	
 	
 	else if (list == 4){
 		char a[100][100] = { 
@@ -76,6 +79,7 @@ int main(void){
 		char ch;
 		while (x != 11 || y != 7)
 		{
+			sum1++;
 			ch = _getch();
 			if (ch == 's')
 			{
@@ -117,14 +121,38 @@ int main(void){
 			system("cls");
 			if(x==7&&y==11){ 
 			    printf("過關!\n");
+			    printf("總共花了%d步:",sum1);
 			} 
 			for (i = 0; i < 12; i++){ 
 				puts(a[i]);
 			} 
 		}
 	}
+	
+	
 	else if (list == 5){
-		printf("請選擇賭場功能\n1.猜數字\n賭大小\n");
+		
+		do{
+		 printf("請選擇賭場功能\n1.猜數字\n賭大小\n");
+			switch(part){
+				case 1: 	//設定籌碼,1~100猜一個數字,沒猜中繼續 
+				    
+					break;
+				
+				case 2: 	// 
+				
+					break;
+				
+				case 3: 	//
+				
+					break;
+				
+				default:	// 
+					
+					break;
+						
+	    	}
+	    }while(sum2=1)
 	
 		
 	}
