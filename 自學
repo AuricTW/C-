@@ -11,7 +11,7 @@ void come(void)		//副程式測試
 
 int main(void){
 	
-	int random,random1,guess,sum1,sum2,part;
+	int random,random1,guess,sum,sum1,sum2,part;
 	double list;
 	
 	srand(time(0));
@@ -133,9 +133,10 @@ int main(void){
 	else if (list == 5){
 		
 		do{
+		 print("您的剩餘籌碼為:",sum); 
 		 printf("請選擇賭場功能\n1.猜數字\n賭大小\n");
 			switch(part){
-				case 1: 	//設定籌碼,1~100猜一個數字,沒猜中繼續 
+				case 1: 	//下注籌碼,1~100猜一個數字,沒猜中繼續,1次中100倍,2次中50倍,3次中20,4次中5倍,5次中2倍,6次中1倍,7次以上結束遊戲 
 				    
 					break;
 				
