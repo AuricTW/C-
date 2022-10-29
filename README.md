@@ -162,7 +162,7 @@ int main(){
     int sum = 0;
     int count = -1;
     
-    while(score != -1){ 		//若score不為-1,則繼續迴圈
+    while(score != -1){ 		//若符合條件,則繼續迴圈
 	count++;
 	sum += score;
 	printf("輸入成績（輸入-1結束）");
@@ -186,7 +186,7 @@ int main(){
 		
 		printf("是否要繼續?Yes:1 No:0\n");
 		scanf("%d",&replay);
-	}while(replay);		//若replay為0,則結束迴圈
+	}while(replay);		//若符合條件，則結束迴圈
 	
 	printf("您的總分為:%.2lf",sum);
 	
