@@ -131,29 +131,53 @@ int main(void){
 	
 	
 	else if (list == 5){
-		
 		do{
-		 print("您的剩餘籌碼為:",sum); 
-		 printf("請選擇賭場功能\n1.猜數字\n賭大小\n");
+			 int sum=3000;
+			 printf("您的剩餘籌碼為:%d",sum); 
+			 printf("請選擇賭場功能\n1.猜數字\n2.賭大小\n");
+			 scanf("%d",&part);
 			switch(part){
-				case 1: 	//下注籌碼,1~100猜一個數字,沒猜中繼續,1次中100倍,2次中50倍,3次中20,4次中5倍,5次中2倍,6次中1倍,7次以上結束遊戲 
-				    
+				case A: 	//下注籌碼,1~100猜一個數字,沒猜中繼續,1次中100倍,2次中50倍,3次中20,4次中5倍,5次中2倍,6次中1倍,7次以上結束遊戲 
+				    int big=100;
+					int small=1;
+				    random=rand();
+				    random1=random%100+1;
+				    while(guess!=random1){
+				    	sum++;
+				    	scanf("%d",&guess);
+				    	if(guess>random1){
+							big=random1;
+							printf("比%d大，比%d小",&small,&big);		
+						}
+						else if(guess<random1){
+							small=random1;
+							printf("比%d大，比%d小",&small,&big);		
+						}
+				    }    
 					break;
 				
-				case 2: 	// 
+				case B: 
+				/*
+下注	
+大小	    總點數為：11或更大/10或更小				1賠1	
+兩顆骰子	猜中兩顆骰子的組合						1賠5	
+雙骰	    任意兩顆或以上點數相同，並為指定之點數	1賠10	
+圍骰	    任意三顆點數相同，並為指定之點數		1賠180	
+全圍    	圍一至圍六任何一種						1賠30			
+*/ 	 
+				printf(" ");
+				break;
 				
-					break;
-				
-				case 3: 	//
-				
+				case C: 	//
+				printf(" ");
 					break;
 				
 				default:	// 
-					
+				printf(" ");	
 					break;
 						
 	    	}
-	    }while(sum2=1)
+	    }while(sum<=0);
 	
 		
 	}
