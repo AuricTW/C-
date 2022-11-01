@@ -14,3 +14,27 @@ int main(){
 }
 	
 	
+#include<stdio.h>
+
+int plus(int a,int b){
+	return a+b;
+}
+int less(int a,int b){
+	return a-b;
+	
+}
+int main(){
+	int m,n;
+	
+	scanf("%d%d",&m,&n);
+
+	int result=plus(m,n);
+
+   printf("%d\n",result);
+
+	
+	result=less(m,n);
+	
+	printf("%d",result);
+	return 0;
+}
