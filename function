@@ -51,3 +51,15 @@ int main(){
 int f(int x){
 	return x+3;
 }
+
+
+
+
+#include<stdio.h>
+int 
+int main(){
+ printf("圓
+ scanf("%f",&x)
+
+return 0;
+}
