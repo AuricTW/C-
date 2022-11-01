@@ -131,8 +131,9 @@ int main(void){
 	
 	
 	else if (list == 5){
+		int sum=3000;
 		do{
-			 int sum=3000;
+			 
 			 printf("您的剩餘籌碼為:%d",sum); 
 			 printf("請選擇賭場功能\n1.猜數字\n2.賭大小\n");
 			 scanf("%d",&part);
