@@ -52,9 +52,9 @@ int main(){
 int f(int x){
 	return x+3;
 }
-scanf("%d%d%d",&x,&y,&z);
-M1(x,y,z);
-printf(
+scanf("%d%d%d",&a,&b,&c);
+M1(a,b,c);
+printf("%d",M1(a,b,c));
 return 0;
 
 M1(int a,int b,int c){
