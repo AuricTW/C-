@@ -52,15 +52,21 @@ int main(){
 int f(int x){
 	return x+3;
 }
-
-
-
-
-#include<stdio.h>
-int 
-int main(){
- printf("圓
- scanf("%f",&x)
-
+scanf("%d%d%d",&x,&y,&z);
+M1(x,y,z);
+printf(
 return 0;
+
+M1(int a,int b,int c){
+int M=a;
+if(b>M){
+    M=b;
 }
+else(c>M){
+    M=c;
+}
+return M;
+}
+
+
+
