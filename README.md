@@ -248,8 +248,48 @@ return 0;
 ## 指標
 
 ##副程式
+回傳值;有return 
 ```C
+#include<stdio.h>
 
+int add(int a,int b);
+
+int main(){
+	int a,b;
+	printf("請輸入數字:");
+	scanf("%d",&a);
+	printf("請輸入數字:");
+	scanf("%d",&b);
+	printf("相加結果為:%d",add(a,b));
+	 
+	return 0;
+}
+
+int add(int a,int b){
+	return a+b;
+}
+```
+
+不回傳值;沒有return
+```C
+#include<stdio.h>
+
+void add(int a,int b);
+
+int main(){
+	int a,b;
+	printf("請輸入數字:");
+	scanf("%d",&a);
+	printf("請輸入數字:");
+	scanf("%d",&b);
+	add(a,b);
+	 
+	return 0;
+}
+
+void add(int a,int b){
+	printf("相加結果為:%d",a+b);
+}
 ```
 
 ## 函式
