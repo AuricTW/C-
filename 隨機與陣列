@@ -1,0 +1,47 @@
+//可能題目:擲骰子,猜數字,產生不重複亂數
+
+1.
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+int main(){
+	int n[10]={0};
+	int random,i;
+	srand(time(0));
+	for(i=0;i<6;i++){
+		random=rand()%6+1;
+		n[i]=random;
+	}
+	for(i=0;i<6;i++){
+		printf("%d  ",n[i]);
+	}
+	return 0;
+}
+
+2.
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+int main(){
+					srand(time(0));
+					int random,random1,guess,sum;
+					int big = 100,small = 1;
+				    random=rand();
+				    random1=random%100+1; 
+				    while(guess!=random1){
+				    	sum++;    	
+				    	printf("請輸入一個數字:");
+				    	scanf("%d",&guess);		    	
+				    	if(guess>random1){
+							big=guess;
+							printf("比%d大，比%d小\n",small,big);		
+						}			
+						else if(guess<random1){
+							small=guess;
+							printf("比%d大，比%d小\n",small,big);		
+						}
+				    }    
+	return 0;
+}
