@@ -3,8 +3,13 @@
 #include<time.h>
 #include<windows.h>
 #include<conio.h>
+
 void list1(),list2(),list3(),list4();
+
+
+
 int list;
+
 int main(){
 	while(1){
 	
@@ -110,35 +115,48 @@ void list3(){
 	}
 
 void list4(){
+		srand(time(0));
+		
+
 		int sum=3000;
-		char part;
+		int part;
 		do{
 			 
 			 printf("您的剩餘籌碼為:%d",sum); 
 			 printf("請選擇賭場功能\n1.猜數字\n2.賭大小\n");
-			 scanf("%c",&part);
+			 scanf("%d",&part);
 			switch(part){
-				case 'A': 	//下注籌碼,1~100猜一個數字,沒猜中繼續,1次中50倍,2次中20倍,3次中5,4次中2倍,5次中1倍,6次中1/2倍,7次以上結束遊戲 
-				    int random,random1,guess;
-					int big=100;
-					int small=1;
+				case 1: 
+				{
+				
+					//下注籌碼,1~100猜一個數字,沒猜中繼續,1次中50倍,2次中20倍,3次中5,4次中2倍,5次中1倍,6次中1/2倍,7次以上結束遊戲 
+				    int random,random1,guess,sum;
+					int big = 100;
+					int small = 1;
+					
 				    random=rand();
 				    random1=random%100+1;
+				   
+				    
 				    while(guess!=random1){
 				    	sum++;
+				    	printf("請輸入一個數字:");
 				    	scanf("%d",&guess);
 				    	if(guess>random1){
-							big=random1;
-							printf("比%d大，比%d小",&small,&big);		
+							big=guess;
+							printf("比%d大，比%d小\n",small,big);		
 						}
 						else if(guess<random1){
-							small=random1;
-							printf("比%d大，比%d小",&small,&big);		
+							small=guess;
+							printf("比%d大，比%d小\n",small,big);		
 						}
 				    }    
 					break;
-				
-				case 'B': 
+				}
+				case 2: 
+				{
+					printf(" ");
+					break;
 				/*
 下注	
 大小	    總點數為：11或更大/10或更小				1賠1	
@@ -147,20 +165,20 @@ void list4(){
 圍骰	    任意三顆點數相同，並為指定之點數		1賠180	
 全圍    	圍一至圍六任何一種						1賠30			
 */ 	 
-				printf(" ");
-				break;
-				
-				case 'C': 	//
-				printf(" ");
+	
+				}
+				case 3:
+				{ 	//
+					printf(" ");
 					break;
-				
-				default:	// 
-				printf(" ");	
+				}
+				default:
+				{	// 
+					printf(" ");	
 					break;
-						
+				}
 	    	}
 	    }while(sum<=0);
 	
 		
 	}
-}
