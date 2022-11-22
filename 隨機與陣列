@@ -20,28 +20,28 @@ int main(){
 }
 
 2.
-
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
 int main(){
-					srand(time(0));
-					int random,random1,guess,sum;
-					int big = 100,small = 1;
-				    random=rand();
-				    random1=random%100+1; 
-				    while(guess!=random1){
-				    	sum++;    	
-				    	printf("請輸入一個數字:");
-				    	scanf("%d",&guess);		    	
-				    	if(guess>random1){
-							big=guess;
-							printf("比%d大，比%d小\n",small,big);		
-						}			
-						else if(guess<random1){
-							small=guess;
-							printf("比%d大，比%d小\n",small,big);		
-						}
-				    }    
+			srand(time(0));
+			int random,random1,guess,sum;
+			int big = 100,small = 1;						
+		    random=rand();
+		    random1=random%100+1;				   			    
+		    while(guess!=random1){
+		    	sum++;			    	
+		    	printf("請輸入一個數字:");
+				scanf("%d",&guess);				  	
+				if(guess>random1){
+					big=guess;
+					printf("比%d大，比%d小\n",small,big);		
+				}		
+				else if(guess<random1){
+					small=guess;
+					printf("比%d大，比%d小\n",small,big);		
+				}
+		    }    
+	
 	return 0;
 }
