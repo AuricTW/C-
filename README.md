@@ -334,7 +334,49 @@ void add(){
 }
 ```
 
-## 函式
+## 函式遞迴
+###基礎概念
+```C
+void f(void);
+int main(){
+	f();
+	return 0;
+} 
+void f(void){
+	f();
+}
+```
+```C
+int f(int);
+
+int main(){
+	printf("%d\n",f(0));
+	return 0;
+}
+
+int f(int i){
+	return f(i+1);
+}
+```
+```C
+#include<stdio.h>
+void countTo3(int);
+
+int main(){
+	countTo3(1);
+	return 0;
+}
+
+void countTo3(int i){
+	if (i<=3){
+		printf("%d\n",i);
+		countTo3(i+1);
+	}
+}
+```
+```C
+
+```
 
 ## 複合型態
 
