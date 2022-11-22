@@ -292,7 +292,7 @@ void add(int a,int b){
 	printf("相加結果為:%d",a+b);
 }
 ```
-### 全域變數富程式寫法
+### 全域變數副程式寫法
 ```C
 #include<stdio.h>
 
