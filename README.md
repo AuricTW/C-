@@ -335,7 +335,7 @@ void add(){
 ```
 
 ## 函式遞迴
-###基礎概念
+### 基礎概念
 ```C
 void f(void);
 int main(){
@@ -358,6 +358,7 @@ int f(int i){
 	return f(i+1);
 }
 ```
+### 基礎範例
 ```C
 #include<stdio.h>
 void countTo3(int);
@@ -371,6 +372,22 @@ void countTo3(int i){
 	if (i<=3){
 		printf("%d\n",i);
 		countTo3(i+1);
+	}
+}
+```
+```C
+#include<stdio.h>
+void countTo1(int);
+
+int main(){
+	countTo1(1);
+	return 0;
+}
+
+void countTo1(int i){
+	if (i<=3){
+		countTo1(i+1);
+		printf("%d\n",i);
 	}
 }
 ```
