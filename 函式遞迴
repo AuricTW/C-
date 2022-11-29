@@ -47,3 +47,36 @@ void countTo1(int i){
 		printf("%d\n",i);
 	}
 }
+
+
+//求連續整數和   
+#include<stdio.h>
+int sum(int);
+int N;
+int main(){
+	printf("N= ");
+	scanf("%d",&N);
+	printf("%d\n",sum(N));
+	return 0;
+}
+int sum(int N){
+	if(N==1){
+		return 1;
+	}
+	return sum(N-1)+N;
+	
+}
+#include<stdio.h>
+void countTo1(int);
+
+int main(){
+	countTo1(1);
+	return 0;
+}
+
+void countTo1(int i){
+	if (i<=3){
+		countTo1(i+1);
+		printf("%d\n",i);
+	}
+}
