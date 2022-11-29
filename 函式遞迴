@@ -80,3 +80,20 @@ void countTo1(int i){
 		printf("%d\n",i);
 	}
 }
+
+//求上樓梯的方法數 
+#include<stdio.h>
+int S(int);
+int N;
+int main(){
+	printf("N= ");
+	scanf("%d",&N);
+	printf("%d\n",S(N));
+	return 0;
+}
+int S(int N){
+	if(N <= 2){
+		return N;
+	}
+	return S(N-1)+S(N-2);
+}
