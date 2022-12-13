@@ -43,3 +43,35 @@ int main(){
 	}
 	return 0;
 }
+
+
+\\隨機九宮格
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+
+int main(){
+	srand(time(0));
+	int v[3][3]={{1,2,3},{4,5,6},{7,8,9}};
+	int i,j,m,n,t,r,k=0;
+	
+	for(i=0;i<3;i++){
+			for(j=0;j<3;j++){
+				r=rand()%(9-k)+k;
+				m=r/3;
+				n=r%3;
+				t=v[i][j];
+				v[i][j]=v[m][n];
+				v[m][n]=t;
+				k++;		
+		}
+	}
+	for(i=0;i<3;i++){
+		for(j=0;j<3;j++){
+			printf("%d ",v[i][j]);
+		}
+		printf("\n");
+	}
+	
+	return 0;
+}
