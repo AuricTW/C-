@@ -60,7 +60,34 @@ int main(){
 //課堂練習2  D1155099  李韋宏 
 #include<stdio.h>
 int main(){
+	int n,k;
 	printf("請輸入成績==>");
+	printf("")
+	scanf("%d",&n);
+	if(k==1){
+		if(n>=80){
+		
+		}
+		else if(n>=70){
+		
+		}
+		else if(n>=60){
+		
+		}
+		else{
+			
+		}
+	}
+	if(k==2){
+		if(n>=60){
+		
+		}
+		else{
+			
+		}
+	}
+	
+
 	
 	return 0;
 }
