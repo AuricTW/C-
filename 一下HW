@@ -62,32 +62,33 @@ int main(){
 int main(){
 	int n,k;
 	printf("請輸入成績==>");
-	printf("")
 	scanf("%d",&n);
+	printf("[1]GPA成績換算\n[2]是否及格\n");
+	scanf("%d",&k);
+	
 	if(k==1){
+		printf("學生成績:");
 		if(n>=80){
-		
+			printf("A");
 		}
 		else if(n>=70){
-		
+			printf("B");
 		}
 		else if(n>=60){
-		
+			printf("C");
 		}
 		else{
-			
+			printf("D");
 		}
 	}
 	if(k==2){
 		if(n>=60){
-		
+			printf("成績及格!");
 		}
 		else{
-			
+			printf("成績不及格!");
 		}
 	}
-	
-
 	
 	return 0;
 }
@@ -96,6 +97,19 @@ int main(){
 //課堂練習3  D1155099  李韋宏 
 #include<stdio.h>
 int main(){
-	printf("要幾層三角形:");
+	int a,i,j;
+	
+	printf("請輸入要幾層三角形:");
+	scanf("%d",&a);
+	for(i=1;i<=a;i++){
+		for(j=i;j<a;j++){
+			printf(" ");
+		}
+		for(j=1;j<i*2;j++){
+			printf("*");
+		}
+		
+		printf("\n");
+	}
 	return 0;
 }
