@@ -113,3 +113,46 @@ int main(){
 	}
 	return 0;
 }
+
+
+//課堂練習2  D1155099  李韋宏 
+#include<stdio.h>
+int main(){
+	int n,k;
+	printf("請輸入成績==>");
+	scanf("%d",&n);
+	printf("[1]GPA成績換算\n[2]是否及格\n");
+	scanf("%d",&k);
+	
+	switch(k){
+	case 1:{
+		printf("學生成績:");
+		if(n>=80){
+			printf("A");
+		}
+		else if(n>=70){
+			printf("B");
+		}
+		else if(n>=60){
+			printf("C");
+		}
+		else{
+			printf("D");
+		}
+			break;
+
+	}
+	case 2:{
+		if(n>=60){
+			printf("成績及格!");
+		}
+		else{
+			printf("成績不及格!");
+		}
+			break;
+	}
+	
+	return 0;
+}
+
+
