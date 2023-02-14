@@ -35,11 +35,12 @@ int main(){
 } 
 
 
+
 //課堂練習1  D1155099  李韋宏
 #include<stdio.h>
 #include<time.h>
 int main(){
-	char name;
+	char name[20];
 	double a,b,bmi;
 	printf("請輸入姓名:");
 	scanf("%s",&name);
@@ -47,11 +48,11 @@ int main(){
 	scanf("%lf",&a);
 	printf("請輸入體重:");
 	scanf("%lf",&b);
-	bmi=a/(b*b);
+	bmi=(b)/((a/100)*(a/100));
 	printf("姓名:%s\n",name);
-	printf("身高:%lf\n",a);
-	printf("體重:%lf\n",b);
-	printf("BMI:%lf\n",bmi);
+	printf("身高:%.2lf\n",a);
+	printf("體重:%.2lf\n",b);
+	printf("BMI:%.2lf\n",bmi);
 	return 0;
 }
 
