@@ -162,7 +162,7 @@ int main(){
     int sum = 0;
     int count = -1;
     
-    while(score != -1){ 		//若符合條件,則繼續迴圈
+    while(score != -1){ 		//若符合條件,則結束迴圈
 	count++;
 	sum += score;
 	printf("輸入成績（輸入-1結束）");
